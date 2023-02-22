@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --fadedOrange: #F2994A;
+    --fuscousGray: #4E5150;
+    --porcelain: #F2F2F2;
+    --battleshipGray: #828282;
+    --dune: #333333;
+    --liver: #4F4F4F;
+    --LavenderPinocchio: #E0E0E0;
+    --white: #ffffff;
+    --cottonseed: #BDBDBD;
+}
+
+.container {
+    width: 95%;
+    max-width: 1052px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+img {
+    width: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding-bottom: 1em;
+    color: var(--fuscousGray);
+}
+
+.checkout-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.price-section {
+    background-color: var(--porcelain);
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.item-card {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.item-image {
+    width: 8.75rem;
+    border-radius: 1em;
+}
+
+.item-name {
+    font-size: 0.75rem;
+    color: var(--fuscousGray);
+}
+
+.discount-price {
+    color: var(--fadedOrange);
+    font-size: 0.875rem;
+    margin-top: 1em;
+}
+
+.actual-price {
+    font-size: 0.625rem;
+    color: var(--fuscousGray);
+    margin-left: 1em;
+}
+
+.number-of-items-card,
+.shipping-price-div,
+.total-price-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+
+}
+
+.number-of-items-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: .1em solid var(--battleshipGray);
+    padding: .8em;
+    border-radius: .7em;
+    margin-top: 2em;
+}
+
+.symbols {
+    background-color: var(--LavenderPinocchio);
+    color: var(--battleshipGray);
+    font-size: 1.7rem;
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: .1em;
+    cursor: pointer;
+}
+
+.shipping-price-div,
+.total-price-div,
+.contact-info-title,
+.shipping-info-title {
+    font-size: 0.875rem;
+    color: var(--dune);
+}
+
+.shipping-price-div,
+.total-price-div {
+    border-top: .1em solid var(--cottonseed);
+    padding-top: 1em;
+}
+
+.shipping-price-div {
+    margin-top: 5em;
+}
+
+.total-price-div {
+    margin-top: 1em;
+}
+
+.contact-info-title,
+.shipping-info-title {
+    margin-top: 2em;
+}
+
+.input-group {
+    margin-top: 1em;
+    position: relative;
+}
+
+label {
+    font-size: 0.625rem;
+    color: var(--liver);
+}
+
+input,
+select {
+    width: 100%;
+    font-size: 0.75rem;
+    color: var(--battleshipGray);
+    border: .1em solid var(--battleshipGray);
+    margin-top: .5em;
+    padding: 1.5em 1.5em 1.5em 4em;
+    border-radius: 1em;
+}
+
+select {
+    background-color: var(--white);
+}
+
+.input-icons {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: .8em;
+
+}
+
+.country-postal-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.country,
+.postal {
+    flex: 0 0 48%;
+}
+
+#Checkbox {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: .5em;
+}
+
+.button {
+    width: 40%;
+    background-color: var(--fadedOrange);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 1em;
+    cursor: pointer;
+    margin-left: 60%;
+}
+
+.attribution {
+    text-align: center;
+    padding-top: 7em;
+    color: var(--cottonseed);
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        width: 80%;
+    }
+
+    .checkout-section {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .checkout-section {
+        gap: 4em;
+    }
+
+    .price-section,
+    .contact-section {
+        width: 50%;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .shipping-price-div,
+    .total-price-div,
+    .contact-info-title,
+    .shipping-info-title {
+        font-size: 1.125rem;
+    }
+
+    select,
+    input {
+        padding-left: 3em;
+    }
+
+    select,
+    input,
+    .item-name,
+    .discount-price {
+        font-size: 1rem;
+    }
+
+    label {
+        font-size: 0.875rem;
+    }
+
+    .contact-info-title {
+        margin-top: 0;
+    }
+}

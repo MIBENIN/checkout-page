@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,maximum-scale=5"
+    />
+
+    <link rel="icon" href="./images/devchallenges.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">Checkout</h1>
+      </header>
+      <main>
+        <section class="checkout-section">
+          <!-- price section -->
+          <div class="price-section">
+            <!-- item card 1 -->
+            <div class="item-card item-card-1">
+              <div class="item-image-div">
+                <img src="./images/photo1.png" alt="item1" class="item-image" />
+              </div>
+              <div class="item-details-div">
+                <h4 class="item-name">Vintage Backbag</h4>
+                <h5 class="discount-price">
+                  $54.99<span class="actual-price">$94.99</span>
+                </h5>
+                <div class="number-of-items-card">
+                  <p class="symbols subtraction">-</p>
+                  <p class="no-of-items">1</p>
+                  <p class="symbols addition">+</p>
+                </div>
+              </div>
+            </div>
+            <!-- item card 2 -->
+            <div class="item-card item-card-2">
+              <div class="item-image-div">
+                <img src="./images/photo2.png" alt="item2" class="item-image" />
+              </div>
+              <div class="item-details-div">
+                <h4 class="item-name">Levi Shoes</h4>
+                <h5 class="discount-price">
+                  $74.99<span class="actual-price">$124.99</span>
+                </h5>
+                <div class="number-of-items-card">
+                  <p class="symbols subtraction">-</p>
+                  <p class="no-of-items">1</p>
+                  <p class="symbols addition">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="shipping-price-div">
+              <h3 class="shipping-div-title">Shipping</h3>
+              <p class="shipping-price">$19</p>
+            </div>
+            <div class="total-price-div">
+              <h3 class="total-div-title">Total</h3>
+              <p class="total-price">$148.98</p>
+            </div>
+          </div>
+          <!-- contact section -->
+          <div class="contact-section">
+            <form action="#">
+              <h2 class="contact-info-title">Contact information</h2>
+
+              <div class="input-group">
+                <img src="./images/email.svg" alt="Email" class="input-icons" />
+                <label for="Email">E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="Email"
+                  placeholder="Enter your email..."
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <img src="./images/phone.svg" alt="phone" class="input-icons" />
+                <label for="Phone">Phone</label>
+                <input
+                  type="tel"
+                  id="Phone"
+                  name="phone"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="Enter your phone..."
+                  required
+                />
+              </div>
+
+              <h2 class="shipping-info-title">Shipping address</h2>
+
+              <div class="input-group">
+                <img
+                  src="./images/fullname.svg"
+                  alt="name"
+                  class="input-icons"
+                />
+                <label for="Fname">Full Name</label>
+                <input
+                  type="text"
+                  id="Fname"
+                  name="name"
+                  value="Rodney Cotton"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <img
+                  src="./images/address.svg"
+                  alt="address"
+                  class="input-icons"
+                />
+                <label for="Address">Address</label>
+                <input
+                  type="text"
+                  id="Address"
+                  name="address"
+                  placeholder="Your Address..."
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <img src="./images/city.svg" alt="city" class="input-icons" />
+                <label for="City">City</label>
+                <input
+                  type="text"
+                  id="City"
+                  name="city"
+                  placeholder="Your City..."
+                  required
+                />
+              </div>
+
+              <div class="country-postal-div">
+                <div class="input-group country">
+                  <img
+                    src="./images/country.svg"
+                    alt="country"
+                    class="input-icons"
+                  />
+                  <label for="Country">Country</label>
+                  <select name="country" id="Country" required>
+                    <option value="" selected="selected">
+                      Your country...
+                    </option>
+                    <option value="India">India</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="China">China</option>
+                    <option value="SriLanka">SriLanka</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Malaysia">Malaysia</option>
+                  </select>
+                </div>
+
+                <div class="input-group postal">
+                  <img
+                    src="./images/postal_code.svg"
+                    alt="postal"
+                    class="input-icons"
+                  />
+                  <label for="Postal">Postal code</label>
+                  <input
+                    type="text"
+                    pattern="[0-9]{6}"
+                    maxlength="6"
+                    id="Postal"
+                    name="postal"
+                    placeholder="Your Postal code..."
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <input type="checkbox" id="Checkbox" />
+                <label for="Checkbox" class="checkbox-label"
+                  >Save this information for next time</label
+                >
+              </div>
+
+              <div class="input-group">
+                <input
+                  type="submit"
+                  name="continue"
+                  value="Continue"
+                  class="button"
+                />
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p class="attribution">
+          created by <a href="">username</a> - devChallenges.io
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
